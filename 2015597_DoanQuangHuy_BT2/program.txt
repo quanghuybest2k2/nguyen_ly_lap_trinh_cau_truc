@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib>
+#include <time.h>
+using namespace std;
+
+#include "2015597_thuvien.h"
+#include "2015597_menu.h"
+
+void ChayChuongTrinh();
+
+int main() {
+	ChayChuongTrinh();
+	return 0;
+}
+
+void ChayChuongTrinh() {
+	int menu, soMenu = 6;
+	DaySo a;
+	int n = 0;
+
+	do {
+		menu = ChonMenu(soMenu);
+		XuLyMenu(a, menu, n);
+	} while (menu > 0);
+
+	cout << "\nCam on da0 su dung chuong trinh";
+}

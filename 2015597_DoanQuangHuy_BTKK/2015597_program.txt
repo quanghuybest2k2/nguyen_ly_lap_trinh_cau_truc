@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+using namespace std;
+
+#include "2015597_thuvien.h"
+
+void ChayChuongTrinh();
+
+int main()
+{
+    ChayChuongTrinh();
+    return 1;
+}
+
+void ChayChuongTrinh()
+{
+    int thang, nam;
+    MaTran lich;
+    do
+    {
+        system("CLS");
+        cout << "\nNhap thang hop le 1 -> 12 : ";
+        cin >> thang;
+    } while (thang < 1 || thang > 12);
+
+    do
+    {
+        system("CLS");
+        cout << "\nNhap nam : ";
+        cin >> nam;
+    } while (nam <= 0);
+
+    system("CLS");
+    cout << "Lich cua thang " << thang << ", nam " << nam << " la:\n";
+    TaoLich(lich, thang, nam);
+    XuatLich(lich);
+    cout << "\nMy Loc cam on ban da su dung chuong trinh (Nhan Enter de thoat!!!)";
+    _getch();
+}
+
